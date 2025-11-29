@@ -1,6 +1,4 @@
 import React from 'react';
-import { Button } from './common/Button';
-import { EmailForm } from './common/EmailForm';
 
 interface HeroProps {
     onNavigate: () => void;
@@ -34,18 +32,22 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 </p>
             </div>
 
-            {/* Mobile-first CTA */}
-            <div className="mt-8 sm:mt-10 flex flex-col items-center justify-center gap-5 sm:gap-6">
-                <div className="w-full max-w-md px-4">
-                   <EmailForm />
-                </div>
-                <div className="flex items-center gap-2 text-text-secondary text-sm font-medium">
-                    <span>Coming Soon</span>
-                    <span>•</span>
-                    <button onClick={onNavigate} className="text-primary hover:text-secondary transition-colors font-semibold underline decoration-2 decoration-primary/30 hover:decoration-secondary/50">
-                        Vote on Our Logo
-                    </button>
-                </div>
+            {/* Epic CTA */}
+            <div className="relative mt-10 sm:mt-14 flex flex-col items-center justify-center gap-6">
+                <button className="group relative px-10 sm:px-14 py-5 sm:py-6 rounded-full bg-gradient-to-r from-primary via-secondary to-primary bg-size-200 text-white font-display text-xl sm:text-2xl md:text-3xl shadow-glow-pink hover:shadow-soft-hover transition-all duration-300 hover:scale-110 active:scale-95 overflow-hidden">
+                    <span className="relative z-10 flex items-center gap-3">
+                        <span>Enter App</span>
+                        <span className="text-2xl sm:text-3xl group-hover:rotate-12 group-hover:scale-125 transition-all duration-300">✨</span>
+                    </span>
+                    {/* Multiple shine effects */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 -translate-x-full group-hover:translate-x-full transition-all duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 translate-x-full group-hover:-translate-x-full transition-all duration-1000" />
+                    {/* Pulsing glow */}
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary opacity-50 blur-xl group-hover:animate-pulse-slow" />
+                </button>
+                <p className="text-text-secondary text-sm sm:text-base font-medium animate-bounce-gentle">
+                    Coming Soon • Be the first to try it! 🎉
+                </p>
             </div>
         </section>
     );
