@@ -39,7 +39,7 @@ export const EmailForm: React.FC = () => {
 
     if (status === 'success') {
         return (
-            <div className="text-center font-semibold text-primary p-4 bg-primary/10 rounded-xl w-full max-w-md mx-auto">
+            <div className="text-center font-semibold text-primary p-4 sm:p-5 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl w-full max-w-md mx-auto shadow-soft animate-bounce-gentle">
                 {message}
             </div>
         );
@@ -48,25 +48,25 @@ export const EmailForm: React.FC = () => {
     return (
         <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-3">
             <div className="relative">
-                <Icon name="mail" className="absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary" />
+                <Icon name="mail" className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-text-secondary text-xl" />
                 <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email for early access"
-                    className="w-full pl-12 pr-4 py-4 rounded-xl border-2 border-transparent bg-surface-light/80 shadow-inner-soft focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all text-text-primary placeholder:text-text-secondary"
+                    className="w-full pl-11 sm:pl-12 pr-4 py-3 sm:py-4 text-sm sm:text-base rounded-xl border-2 border-accent/30 bg-surface-light shadow-inner-soft focus:outline-none focus:border-primary transition-all text-text-primary placeholder:text-text-secondary font-medium"
                     disabled={status === 'loading'}
                     aria-label="Email for early access"
                 />
             </div>
             <button
                 type="submit"
-                className="w-full font-display text-lg px-8 py-4 rounded-xl shadow-soft transition-all duration-300 transform hover:scale-105 active:scale-100 flex items-center justify-center gap-2 bg-accent text-yellow-900 disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100"
+                className="w-full font-display text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-soft transition-all duration-200 transform hover:scale-105 hover:shadow-soft-hover active:scale-95 flex items-center justify-center gap-2 bg-gradient-to-r from-accent to-accent/80 text-text-primary disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 disabled={status === 'loading'}
             >
                 {status === 'loading' ? 'Joining...' : 'Get Early Access'}
             </button>
-            {status === 'error' && <p className="text-red-500 text-sm font-semibold pt-1">{message}</p>}
+            {status === 'error' && <p className="text-danger text-xs sm:text-sm font-semibold pt-1">{message}</p>}
         </form>
     );
 };
