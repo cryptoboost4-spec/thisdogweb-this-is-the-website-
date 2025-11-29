@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "besties-web",
+    "prod": "claudebestiesweb"
+  },
+  "targets": {},
+  "etags": {}
+}
