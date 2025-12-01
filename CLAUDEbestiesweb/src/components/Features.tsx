@@ -7,8 +7,8 @@ const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => (
     <div className="relative bg-white/70 backdrop-blur-sm rounded-2xl p-4 shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 border border-gray-200 h-full group">
         <div className="relative z-10">
             <div className="flex items-start gap-2 mb-2">
-                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 text-primary shadow-soft-dreamy group-hover:scale-105 transition-all duration-300 flex-shrink-0">
-                    <Icon name={feature.icon} className="text-lg" />
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl flex-shrink-0 group-hover:scale-105 transition-all duration-300">
+                    <Icon name={feature.icon} className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary" />
                 </div>
                 <h4 className="font-semibold text-sm text-gray-900 pt-1">{feature.title}</h4>
             </div>

@@ -20,40 +20,28 @@ const TrustBadges: React.FC = () => {
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {TRUST_BADGES_DATA.map((badge, index) => {
-                        const colors = [
-                            { bg: 'from-pink-100 to-purple-100', border: 'border-pink-200', iconBg: 'from-pink-400 to-pink-600' },
-                            { bg: 'from-purple-100 to-fuchsia-100', border: 'border-purple-200', iconBg: 'from-purple-400 to-purple-600' },
-                            { bg: 'from-fuchsia-100 to-pink-100', border: 'border-fuchsia-200', iconBg: 'from-fuchsia-400 to-fuchsia-600' }
-                        ];
-                        const color = colors[index % colors.length];
-
-                        return (
+                    {TRUST_BADGES_DATA.map((badge, index) => (
                         <div
                             key={index}
-                            className={`bg-gradient-to-br ${color.bg} bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 text-center group shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 border ${color.border} relative overflow-hidden`}
+                            className="flex flex-col items-center justify-center p-6 bg-white/70 backdrop-blur-sm rounded-2xl shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 border border-gray-100 space-y-3 group"
                         >
-                            <div className="relative z-10">
-                                {/* Icon */}
-                                <div className="flex items-center justify-center mb-3">
-                                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${color.iconBg} flex items-center justify-center shadow-soft-dreamy group-hover:scale-105 transition-all duration-300`}>
-                                        <Icon name={badge.icon} className="text-white text-xl" />
-                                    </div>
-                                </div>
+                            {/* Icon with gradient */}
+                            <Icon
+                                name={badge.icon}
+                                className="text-5xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary group-hover:scale-110 transition-all duration-300"
+                            />
 
-                                {/* Title */}
-                                <h4 className="font-semibold text-sm text-gray-900 mb-2">
-                                    {badge.title}
-                                </h4>
+                            {/* Title */}
+                            <h4 className="font-display text-sm font-semibold text-gray-900">
+                                {badge.title}
+                            </h4>
 
-                                {/* Description */}
-                                <p className="text-xs text-gray-700 leading-snug">
-                                    {badge.description}
-                                </p>
-                            </div>
+                            {/* Description */}
+                            <p className="text-xs text-gray-700 leading-snug text-center">
+                                {badge.description}
+                            </p>
                         </div>
-                        );
-                    })}
+                    ))}
                 </div>
             </div>
         </section>

@@ -20,51 +20,37 @@ const UseCases: React.FC = () => {
                     Life happens. Whether it's a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-semibold">first date</span>, a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-semibold">night out</span>, or just <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-semibold">walking home</span> — your besties have got your back. 💕
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                    {USE_CASES_DATA.map((useCase, index) => {
-                        const colors = [
-                            { bg: 'from-blue-50 to-indigo-50', border: 'border-blue-200', iconBg: 'from-blue-100 to-indigo-100' },
-                            { bg: 'from-rose-50 to-pink-50', border: 'border-rose-200', iconBg: 'from-rose-100 to-pink-100' },
-                            { bg: 'from-purple-50 to-fuchsia-50', border: 'border-purple-200', iconBg: 'from-purple-100 to-fuchsia-100' },
-                            { bg: 'from-amber-50 to-orange-50', border: 'border-amber-200', iconBg: 'from-amber-100 to-orange-100' }
-                        ];
-                        const color = colors[index % colors.length];
-
-                        return (
+                    {USE_CASES_DATA.map((useCase, index) => (
                         <div
                             key={index}
-                            className={`relative bg-gradient-to-br ${color.bg} bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 border ${color.border} group`}
+                            className="relative bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 border border-gray-100 group"
                         >
-                            <div className="relative z-10">
-                                {/* Emoji header */}
-                                <div className="flex items-center gap-3 mb-3">
-                                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${color.iconBg} flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-soft-dreamy flex-shrink-0`}>
-                                        <span className="text-2xl">{useCase.emoji}</span>
-                                    </div>
-                                    <h4 className="font-semibold text-sm text-gray-900 flex-1">
-                                        {useCase.title}
-                                    </h4>
-                                </div>
-
-                                {/* Description */}
-                                <p className="text-xs text-gray-700 mb-3 leading-snug">
-                                    {useCase.description}
-                                </p>
-
-                                {/* Examples */}
-                                <ul className="space-y-1.5">
-                                    {useCase.examples.map((example, exampleIndex) => (
-                                        <li key={exampleIndex} className="flex items-start gap-2">
-                                            <div className="w-1 h-1 rounded-full bg-gradient-to-br from-primary to-secondary mt-1.5 flex-shrink-0"></div>
-                                            <span className="text-xs text-gray-700 leading-snug">
-                                                {example}
-                                            </span>
-                                        </li>
-                                    ))}
-                                </ul>
+                            {/* Emoji header */}
+                            <div className="flex items-center gap-4 mb-4">
+                                <span className="text-4xl group-hover:scale-110 transition-all duration-300">{useCase.emoji}</span>
+                                <h4 className="font-display text-base font-semibold text-gray-900 flex-1">
+                                    {useCase.title}
+                                </h4>
                             </div>
+
+                            {/* Description */}
+                            <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+                                {useCase.description}
+                            </p>
+
+                            {/* Examples */}
+                            <ul className="space-y-2">
+                                {useCase.examples.map((example, exampleIndex) => (
+                                    <li key={exampleIndex} className="flex items-start gap-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-br from-primary to-secondary mt-2 flex-shrink-0"></div>
+                                        <span className="text-xs text-gray-700 leading-relaxed">
+                                            {example}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                        );
-                    })}
+                    ))}
                 </div>
             </div>
         </section>

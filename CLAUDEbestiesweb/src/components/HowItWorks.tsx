@@ -3,22 +3,14 @@ import { HOW_IT_WORKS_DATA } from '../constants';
 import type { Step } from '../types';
 
 const StepCard: React.FC<{ step: Step; index: number }> = ({ step, index }) => {
-    const colors = [
-        { bg: 'from-purple-50 to-fuchsia-50', border: 'border-purple-200', numBg: 'from-purple-400 to-purple-600' },
-        { bg: 'from-pink-50 to-rose-50', border: 'border-pink-200', numBg: 'from-pink-400 to-pink-600' },
-        { bg: 'from-fuchsia-50 to-pink-50', border: 'border-fuchsia-200', numBg: 'from-fuchsia-400 to-fuchsia-600' },
-        { bg: 'from-rose-50 to-pink-50', border: 'border-rose-200', numBg: 'from-rose-400 to-rose-600' }
-    ];
-    const color = colors[index % colors.length];
-
     return (
-    <div className={`flex items-start gap-3 text-left bg-gradient-to-br ${color.bg} bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 border ${color.border} group`}>
-        <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${color.numBg} flex items-center justify-center shadow-soft-dreamy group-hover:scale-105 transition-all duration-300`}>
-            <span className="font-display text-xl text-white">{index + 1}</span>
+    <div className="flex items-start gap-4 text-left bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 border border-gray-100 group">
+        <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-soft-dreamy group-hover:scale-105 transition-all duration-300">
+            <span className="font-display text-2xl text-white">{index + 1}</span>
         </div>
         <div className="flex-1 min-w-0">
-            <h4 className="font-semibold text-sm text-gray-900 mb-1">{step.title}</h4>
-            <p className="text-xs text-gray-700 leading-snug">{step.description}</p>
+            <h4 className="font-display text-base font-semibold text-gray-900 mb-2">{step.title}</h4>
+            <p className="text-sm text-gray-700 leading-relaxed">{step.description}</p>
         </div>
     </div>
     );
