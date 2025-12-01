@@ -12,8 +12,8 @@ const StepCard: React.FC<{ step: Step; index: number }> = ({ step, index }) => {
     const color = colors[index % colors.length];
 
     return (
-    <div className={`flex items-start gap-3 text-left bg-gradient-to-br ${color.bg} rounded-xl p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border ${color.border} group`}>
-        <div className={`flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br ${color.numBg} flex items-center justify-center shadow-sm group-hover:scale-105 transition-all duration-300`}>
+    <div className={`flex items-start gap-3 text-left bg-gradient-to-br ${color.bg} bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 border ${color.border} group`}>
+        <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${color.numBg} flex items-center justify-center shadow-soft-dreamy group-hover:scale-105 transition-all duration-300`}>
             <span className="font-display text-xl text-white">{index + 1}</span>
         </div>
         <div className="flex-1 min-w-0">
@@ -27,9 +27,10 @@ const StepCard: React.FC<{ step: Step; index: number }> = ({ step, index }) => {
 const HowItWorks: React.FC = () => {
     return (
         <section className="py-12 sm:py-16 px-4 relative overflow-hidden">
-            {/* Subtle background effects */}
+            {/* Dreamy background blurs */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/10 to-transparent pointer-events-none" />
-            <div className="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-gradient-radial from-primary/8 to-transparent blur-3xl pointer-events-none animate-pulse-slow" />
+            <div className="absolute -bottom-1/4 -left-1/4 w-96 h-96 bg-accent/15 rounded-full filter blur-3xl opacity-50 animate-pulse-slow" />
+            <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] bg-primary/10 rounded-full filter blur-3xl opacity-40" style={{ animationDelay: '2s' }} />
 
             {/* Floating decorative elements */}
             <div className="hidden lg:block floating-emoji" style={{ top: '20%', right: '8%', animationDelay: '0s' }}>🎯</div>

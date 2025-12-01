@@ -5,9 +5,10 @@ import { TRUST_BADGES_DATA } from '../constants';
 const TrustBadges: React.FC = () => {
     return (
         <section className="py-12 sm:py-16 px-4 bg-gradient-to-b from-transparent via-secondary/10 to-transparent relative overflow-hidden">
-            {/* Subtle background effects */}
-            <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-gradient-radial from-primary/8 to-transparent blur-3xl pointer-events-none animate-pulse-slow" />
-            <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-gradient-radial from-secondary/8 to-transparent blur-3xl pointer-events-none animate-pulse-slow" style={{ animationDelay: '1.5s' }} />
+            {/* Dreamy background blurs */}
+            <div className="absolute -top-1/4 -left-1/4 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl opacity-50 animate-pulse-slow" />
+            <div className="absolute -bottom-1/4 -right-1/4 w-96 h-96 bg-secondary/20 rounded-full filter blur-3xl opacity-50 animate-pulse-slow" style={{ animationDelay: '1.5s' }} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/10 rounded-full filter blur-3xl opacity-40" />
 
             <div className="max-w-5xl mx-auto relative z-10">
                 <div className="text-center mb-8 sm:mb-10">
@@ -30,12 +31,12 @@ const TrustBadges: React.FC = () => {
                         return (
                         <div
                             key={index}
-                            className={`bg-gradient-to-br ${color.bg} rounded-xl p-4 text-center group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border ${color.border} relative overflow-hidden`}
+                            className={`bg-gradient-to-br ${color.bg} bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 text-center group shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 border ${color.border} relative overflow-hidden`}
                         >
                             <div className="relative z-10">
                                 {/* Icon */}
                                 <div className="flex items-center justify-center mb-3">
-                                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${color.iconBg} flex items-center justify-center shadow-sm group-hover:scale-105 transition-all duration-300`}>
+                                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${color.iconBg} flex items-center justify-center shadow-soft-dreamy group-hover:scale-105 transition-all duration-300`}>
                                         <Icon name={badge.icon} className="text-white text-xl" />
                                     </div>
                                 </div>

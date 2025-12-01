@@ -33,6 +33,8 @@ export default {
       boxShadow: {
         'soft': '0 10px 25px -5px rgba(255, 105, 180, 0.2), 0 8px 10px -6px rgba(255, 105, 180, 0.15)',
         'soft-hover': '0 20px 40px -10px rgba(255, 105, 180, 0.35), 0 10px 20px -8px rgba(255, 105, 180, 0.25)',
+        'soft-dreamy': '0 10px 25px -5px rgba(255, 182, 193, 0.3), 0 8px 10px -6px rgba(255, 182, 193, 0.2)',
+        'soft-dreamy-hover': '0 15px 35px -5px rgba(255, 182, 193, 0.4), 0 10px 15px -6px rgba(255, 182, 193, 0.3)',
         'inner-soft': 'inset 0 2px 8px 0 rgba(255, 105, 180, 0.15)',
         'glow-pink': '0 0 30px rgba(255, 105, 180, 0.7), 0 0 60px rgba(255, 105, 180, 0.4)',
         'glow-purple': '0 0 30px rgba(147, 112, 219, 0.7), 0 0 60px rgba(147, 112, 219, 0.4)',

@@ -20,7 +20,7 @@ const Faq: React.FC = () => {
                     {FAQ_DATA.map(item => (
                         <div
                             key={item.question}
-                            className="bg-white p-4 rounded-xl hover:shadow-lg backdrop-blur-sm border border-gray-200 transition-all duration-300 hover:-translate-y-1 group"
+                            className="bg-white/70 p-4 rounded-2xl backdrop-blur-sm border border-gray-200 shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 group"
                         >
                             <h4 className="font-semibold text-sm text-gray-900 mb-1">{item.question}</h4>
                             <p className="text-xs text-gray-700 leading-snug">{item.answer}</p>

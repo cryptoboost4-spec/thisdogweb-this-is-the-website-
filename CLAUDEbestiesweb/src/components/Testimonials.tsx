@@ -22,7 +22,7 @@ const Testimonials: React.FC = () => {
                     {TESTIMONIALS_DATA.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-xl p-4 sm:p-5 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-200 relative group"
+                            className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 sm:p-5 shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 border border-gray-200 relative group"
                         >
 
                             {/* Quote decoration */}
