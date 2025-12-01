@@ -34,7 +34,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
             {/* Epic CTA */}
             <div className="relative mt-10 sm:mt-14 flex flex-col items-center justify-center gap-6">
-                <button className="group relative px-10 sm:px-14 py-5 sm:py-6 rounded-full bg-gradient-to-r from-primary via-secondary to-primary bg-size-200 text-white font-display text-xl sm:text-2xl md:text-3xl shadow-glow-pink hover:shadow-soft-hover transition-all duration-300 hover:scale-110 active:scale-95 overflow-hidden">
+                <a href="https://app.bestiesapp.xyz" target="_blank" rel="noopener noreferrer" className="group relative px-10 sm:px-14 py-5 sm:py-6 rounded-full bg-gradient-to-r from-primary via-secondary to-primary bg-size-200 text-white font-display text-xl sm:text-2xl md:text-3xl shadow-glow-pink hover:shadow-soft-hover transition-all duration-300 hover:scale-110 active:scale-95 overflow-hidden inline-block">
                     <span className="relative z-10 flex items-center gap-3">
                         <span>Enter App</span>
                         <span className="text-2xl sm:text-3xl group-hover:rotate-12 group-hover:scale-125 transition-all duration-300">✨</span>
@@ -44,9 +44,9 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 translate-x-full group-hover:-translate-x-full transition-all duration-1000" />
                     {/* Pulsing glow */}
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary opacity-50 blur-xl group-hover:animate-pulse-slow" />
-                </button>
+                </a>
                 <p className="text-text-secondary text-sm sm:text-base font-medium animate-bounce-gentle">
-                    Coming Soon • Be the first to try it! 🎉
+                    Start protecting your besties today! 🎉
                 </p>
             </div>
         </section>
