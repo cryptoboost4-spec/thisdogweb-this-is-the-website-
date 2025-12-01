@@ -4,10 +4,10 @@ import { FEATURES_DATA } from '../constants';
 import type { Feature } from '../types';
 
 const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => (
-    <div className="relative bg-white rounded-xl p-4 hover:shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 border border-gray-200 h-full group">
+    <div className="relative bg-white/70 backdrop-blur-sm rounded-2xl p-4 shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 border border-gray-200 h-full group">
         <div className="relative z-10">
             <div className="flex items-start gap-2 mb-2">
-                <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 text-primary shadow-sm group-hover:scale-105 transition-all duration-300 flex-shrink-0">
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 text-primary shadow-soft-dreamy group-hover:scale-105 transition-all duration-300 flex-shrink-0">
                     <Icon name={feature.icon} className="text-lg" />
                 </div>
                 <h4 className="font-semibold text-sm text-gray-900 pt-1">{feature.title}</h4>
@@ -20,9 +20,10 @@ const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => (
 const Features: React.FC = () => {
     return (
         <section className="py-12 sm:py-16 px-4 relative overflow-hidden">
-            {/* Subtle background effects */}
-            <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-radial from-primary/6 to-transparent blur-3xl pointer-events-none animate-pulse-slow" />
-            <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-gradient-radial from-secondary/6 to-transparent blur-3xl pointer-events-none animate-pulse-slow" style={{ animationDelay: '2s' }} />
+            {/* Dreamy background blurs */}
+            <div className="absolute -top-1/4 -right-1/4 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl opacity-50 animate-pulse-slow" />
+            <div className="absolute -bottom-1/4 -left-1/4 w-96 h-96 bg-secondary/15 rounded-full filter blur-3xl opacity-50 animate-pulse-slow" style={{ animationDelay: '2s' }} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/10 rounded-full filter blur-3xl opacity-40" />
 
             {/* Floating decorative elements */}
             <div className="hidden lg:block floating-emoji" style={{ top: '10%', right: '8%', animationDelay: '0s' }}>⚡</div>

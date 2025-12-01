@@ -5,9 +5,10 @@ import { PRICING_DATA } from '../constants';
 const Pricing: React.FC = () => {
     return (
         <section className="py-12 sm:py-16 px-4 relative overflow-hidden">
-            {/* Subtle background gradients */}
+            {/* Dreamy background blurs */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/10 to-transparent pointer-events-none" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-radial from-secondary/10 to-transparent blur-3xl pointer-events-none animate-pulse-slow" />
+            <div className="absolute -top-1/4 -left-1/4 w-96 h-96 bg-secondary/15 rounded-full filter blur-3xl opacity-50 animate-pulse-slow" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/10 rounded-full filter blur-3xl opacity-40" />
 
             {/* Floating decorative elements */}
             <div className="hidden lg:block floating-emoji" style={{ top: '15%', left: '10%', animationDelay: '0s' }}>💰</div>
@@ -24,10 +25,10 @@ const Pricing: React.FC = () => {
                     {PRICING_DATA.map(tier => (
                         <div
                             key={tier.title}
-                            className={`relative rounded-xl p-4 hover:shadow-lg backdrop-blur-sm border-2 transition-all duration-300 hover:-translate-y-1 group ${
+                            className={`relative rounded-2xl p-4 backdrop-blur-sm border-2 shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 group ${
                                 tier.highlight
-                                    ? 'bg-gradient-to-br from-purple-50 to-fuchsia-50 border-purple-300 shadow-md'
-                                    : 'bg-white border-gray-200'
+                                    ? 'bg-gradient-to-br from-purple-50/70 to-fuchsia-50/70 border-purple-300'
+                                    : 'bg-white/70 border-gray-200'
                             }`}
                         >
                             <div className="relative z-10">

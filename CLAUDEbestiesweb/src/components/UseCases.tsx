@@ -4,8 +4,9 @@ import { USE_CASES_DATA } from '../constants';
 const UseCases: React.FC = () => {
     return (
         <section className="py-12 sm:py-16 px-4 bg-gradient-to-b from-transparent via-primary/10 to-transparent relative overflow-hidden">
-            {/* Subtle background effects */}
-            <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-gradient-radial from-secondary/8 to-transparent blur-3xl pointer-events-none animate-pulse-slow" />
+            {/* Dreamy background blurs */}
+            <div className="absolute -top-1/4 -right-1/4 w-96 h-96 bg-secondary/15 rounded-full filter blur-3xl opacity-50 animate-pulse-slow" />
+            <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-primary/10 rounded-full filter blur-3xl opacity-40" style={{ animationDelay: '1s' }} />
 
             {/* Minimal floating decorative elements */}
             <div className="hidden lg:block floating-emoji" style={{ top: '12%', right: '10%', animationDelay: '0s' }}>🌙</div>
@@ -31,12 +32,12 @@ const UseCases: React.FC = () => {
                         return (
                         <div
                             key={index}
-                            className={`relative bg-gradient-to-br ${color.bg} rounded-xl p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border ${color.border} group`}
+                            className={`relative bg-gradient-to-br ${color.bg} bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-soft-dreamy hover:shadow-soft-dreamy-hover transition-all duration-300 hover:-translate-y-1 border ${color.border} group`}
                         >
                             <div className="relative z-10">
                                 {/* Emoji header */}
                                 <div className="flex items-center gap-3 mb-3">
-                                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${color.iconBg} flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-sm flex-shrink-0`}>
+                                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${color.iconBg} flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-soft-dreamy flex-shrink-0`}>
                                         <span className="text-2xl">{useCase.emoji}</span>
                                     </div>
                                     <h4 className="font-semibold text-sm text-gray-900 flex-1">
