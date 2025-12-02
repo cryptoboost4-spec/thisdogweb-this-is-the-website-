@@ -26,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                     Your Safety Network. Always There When You Need It. ✨
                 </h2>
                 <p className="max-w-2xl mx-auto text-base sm:text-lg text-text-secondary px-4 leading-relaxed">
-                    <span className="text-text-primary font-semibold">First dates. Late nights. New places.</span> Your besties know you're safe — and get automatic alerts if you're not. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-semibold">No awkward texts, no forgotten check-ins.</span> Just real friends looking out for each other. 💕
+                    <span className="font-semibold text-primary">First dates. Late nights. New places.</span> Your besties know you're safe — and get <span className="font-semibold text-primary">automatic alerts</span> if you're not. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-semibold">No awkward texts, no forgotten check-ins.</span> Just <span className="font-semibold text-primary">real friends looking out for each other.</span> 💕
                 </p>
             </div>
 
@@ -39,8 +39,8 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 -translate-x-full group-hover:translate-x-full transition-all duration-700" />
                 </a>
-                <p className="text-text-secondary text-sm font-semibold">
-                    Start protecting your besties today! 🎉
+                <p className="text-text-secondary text-sm">
+                    <span className="font-semibold text-primary">Start protecting your besties</span> today! 🎉
                 </p>
             </div>
         </section>
