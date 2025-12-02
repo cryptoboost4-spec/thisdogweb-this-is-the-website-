@@ -104,6 +104,14 @@ export default {
       backgroundSize: {
         '200': '200% 200%',
         '300': '300% 300%',
+      },
+      backgroundImage: {
+        'gradient-pink-purple': 'linear-gradient(135deg, #FF69B4 0%, #9370DB 100%)',
+        'gradient-purple-pink': 'linear-gradient(135deg, #9370DB 0%, #FF69B4 100%)',
+        'gradient-pink-purple-radial': 'radial-gradient(circle, #FF69B4 0%, #9370DB 100%)',
+        'gradient-pink-purple-diagonal': 'linear-gradient(45deg, #FF69B4 0%, #9370DB 100%)',
+        'gradient-pink-purple-vertical': 'linear-gradient(to bottom, #FF69B4 0%, #9370DB 100%)',
+        'gradient-pink-purple-horizontal': 'linear-gradient(to right, #FF69B4 0%, #9370DB 100%)',
       }
     },
   },
